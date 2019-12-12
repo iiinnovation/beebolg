@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="signin.css" rel="stylesheet">
+  <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+  <style >
+    body{
+      background-image: url("../static/img/1.jpg");
+      background-position: center 0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      -moz-background-size: cover;
+    }
+  </style>
+  <title>用户登陆</title>
+  <style>
+    .jumbotron{
+      background:url("../static/img/1.jpg");
+      background-size: cover;
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+  </style>
+<body>
+<div class="jumbotron">
+<div class="container">
+  <div class="col-lg-3 col-md-offset-4">
+  <form class="form-signin" method="post" action="{{urlfor "ShowloginController.Showlogin"}}" name="register">
+    <h1 class="login_title text-center  ">用户登陆</h1>
+    {{ .xsrfdata }}
+    <label for="forminput" class="sr-only ">用户名</label>
+    <input type="text" placeholder="用户名" class="form-control " name="username">
+    <span>{{.errmsg1}}</span>
+    <label for="forminput" class="sr-only ">密码</label>
+    <input type="password" placeholder="密码" class="form-control " name="password">
+    <span>{{.errmsg}}</span>
+        <div class="checkbox ">
+         <label>
+           <input type="checkbox" value="记住账号" name="remember">记住账号{{.remember}}
+         </label>
+  </div>
+
+    <button type="submit" class="btn btn-lg btn-primary btn-block" onclick="window.location.href='home.html'">登陆</button>
+  </form>
+    <button type="submit" class="btn btn-lg btn-primary btn-block" onclick="window.location.href='register.html'">注册</button>
+          </div>
+</div>
+
+</div>
+</body>
+</html>

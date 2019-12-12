@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<form  class="login_form" name = "register" method="post" action="{{urlfor "RegisterController.Handleregister"}}">
+    <h1 class="login_title">用户注册</h1>
+    <input type="text" placeholder="用户名" class="input_txt" name="username">
+    <input type="password" placeholder="密码" class="input_txt" name = "password">
+    <input type="submit" value="注 册" class="input_sub">
+    <span>{{.errmsg}}</span>
+</form>
+
+</body>
